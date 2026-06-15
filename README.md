@@ -7,16 +7,17 @@
 
 ## 🚀 Live Site
 
-Deployed via Vercel → **[your-project.vercel.app](https://your-project.vercel.app)**
+Deployed via Netlify → **[your-project.netlify.app](https://your-project.netlify.app)**
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 techfest/
 ├── index.html          ← Main HTML (all sections)
-├── vercel.json         ← Vercel deployment config
+├── netlify.toml        ← Netlify deployment config (headers)
+├── vercel.json         ← Vercel deployment config (legacy)
 ├── .gitignore
 ├── README.md
 ├── css/
@@ -32,7 +33,7 @@ techfest/
 
 ---
 
-## ⚙️ Deploy to Vercel (Step-by-Step)
+## ⚙️ Deploy to Netlify (Step-by-Step)
 
 ### Step 1 — Push to GitHub
 
@@ -48,49 +49,43 @@ git remote add origin https://github.com/YOUR_USERNAME/techfest-website.git
 git push -u origin main
 ```
 
-### Step 2 — Deploy on Vercel
+### Step 2 — Deploy on Netlify
 
-**Option A — Vercel Dashboard (easiest):**
-1. Go to [vercel.com](https://vercel.com) → **Add New Project**
-2. Click **Import Git Repository** → select `techfest-website`
-3. Framework Preset → select **Other** (static site)
-4. Root Directory → leave as `/`
-5. Click **Deploy** ✅
+**Option A — Netlify Dashboard (easiest):**
+1. Go to [netlify.com](https://netlify.com) → **Add new site**
+2. Click **Import an existing project** → select **GitHub** and authorize.
+3. Choose your `techfest-website` repository.
+4. Leave build settings empty (since it's a static site).
+5. Click **Deploy site** ✅
 
-**Option B — Vercel CLI:**
+**Option B — Netlify CLI:**
 ```bash
-# Install Vercel CLI (one-time)
-npm install -g vercel
+# Install Netlify CLI (one-time)
+npm install -g netlify-cli
 
 # From inside the techfest folder:
-vercel
+netlify deploy --prod
 
-# Follow the prompts:
-# ? Set up and deploy? → Y
-# ? Which scope? → your account
-# ? Link to existing project? → N
-# ? Project name → techfest-website
-# ? In which directory is your code? → ./
-# Deployed! ✅
+# Follow the prompts to authorize and deploy your site.
 ```
 
 ### Step 3 — Custom Domain (optional)
 
-In Vercel Dashboard → Project → **Settings → Domains**  
+In Netlify Dashboard → Site configuration → **Domain management**  
 Add your domain e.g. `techfest2026.com` and follow DNS instructions.
 
 ---
 
 ## 🔄 Update & Redeploy
 
-Every `git push` to `main` auto-redeploys on Vercel.
+Every `git push` to `main` auto-redeploys on Netlify.
 
 ```bash
 # Make your changes, then:
 git add .
 git commit -m "update: your change description"
 git push
-# Vercel auto-deploys in ~30 seconds ✅
+# Netlify auto-deploys in seconds ✅
 ```
 
 ---
