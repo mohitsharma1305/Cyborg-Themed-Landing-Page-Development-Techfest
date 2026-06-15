@@ -7,7 +7,7 @@
 
 ## 🚀 Live Site
 
-Deployed via Netlify → **[your-project.netlify.app](https://cyborgthemed-landing-page-development.netlify.app)**
+Deployed via Netlify → **[cyborgthemed-landing-page-development.netlify.app/](https://cyborgthemed-landing-page-development.netlify.app)**
 
 ---
 
